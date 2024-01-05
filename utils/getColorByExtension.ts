@@ -14,5 +14,5 @@ const extantionColor = {
 
 export type Extension = keyof typeof extantionColor;
 export type Color = (typeof extantionColor)[Extension];
-
+//@ts-ignore
 export const getColorByExtention = (extension: string): string => extantionColor[extension];

@@ -6,7 +6,7 @@ import {UploadButton} from '../UploadButton';
 interface FileActionsProps {
 	onClickRemove: VoidFunction;
 	onClickShare: VoidFunction;
-	onUpload: VoidFunction;
+	onUpload: (options: any) => Promise<void>;
 	isActive: boolean;
 }
 
@@ -18,7 +18,10 @@ export const FileActions: FC<FileActionsProps> = ({
 }) => {
 	return (
 		<div className={styles.root}>
-			<UploadButton onUpload={onUpload} />
+			<UploadButton
+				//@ts-ignore
+				onUpload={onUpload}
+			/>
 			{/* <Button onClick={onClickShare} disabled={!isActive}>
 				Share
 			</Button> */}

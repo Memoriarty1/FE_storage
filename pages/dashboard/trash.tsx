@@ -3,7 +3,6 @@ import {checkAuth} from '@/utils/checkAuth';
 import {Layout} from '@/layout/Layout';
 import * as Api from '@/api';
 import {FileItem} from '@/api/dto/files.dto';
-import {FileList} from '@/components/FileList';
 import {DashboardLayout} from '@/layout/DashboardLayout';
 import {Files} from '@/components/Files';
 
@@ -18,7 +17,7 @@ const DashboardBucket: NextPage<DashboardBucketProps> = ({items}) => {
 		</DashboardLayout>
 	);
 };
-
+//@ts-ignore
 DashboardBucket.getLayout = function (page: React.ReactNode) {
 	return <Layout title="Dashboard/Bucket">{page}</Layout>;
 };

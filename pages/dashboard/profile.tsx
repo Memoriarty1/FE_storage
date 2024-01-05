@@ -16,7 +16,7 @@ const DahsboardProfilePage: NextPage<Props> = ({userData}) => {
 		</main>
 	);
 };
-
+//@ts-ignore
 DahsboardProfilePage.getLayout = function (page: React.ReactNode) {
 	return <ProfileLayouts title="Dashboard/Profile">{page}</ProfileLayouts>;
 };

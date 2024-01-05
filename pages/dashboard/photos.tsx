@@ -3,9 +3,7 @@ import {checkAuth} from '@/utils/checkAuth';
 import {Layout} from '@/layout/Layout';
 import * as Api from '@/api';
 import {FileItem} from '@/api/dto/files.dto';
-import {FileList} from '@/components/FileList';
 import {DashboardLayout} from '@/layout/DashboardLayout';
-import {FileActions} from '@/components/FileActions';
 import {Files} from '@/components/Files';
 
 interface DashboardPhotosProps {
@@ -20,6 +18,7 @@ const DashboardPhotos: NextPage<DashboardPhotosProps> = ({items}) => {
 	);
 };
 
+//@ts-ignore
 DashboardPhotos.getLayout = function (page: React.ReactNode) {
 	return <Layout title="Dashboard/Photos">{page}</Layout>;
 };

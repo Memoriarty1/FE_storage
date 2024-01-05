@@ -20,10 +20,6 @@ export const Files: FC<FilesProps> = ({items, withActions}) => {
 	const router = useRouter();
 	const patharr = router.pathname.split('/');
 
-	const RefreshFilesList = (type: string) => {
-		const refreshedList = Api.files.getAllFilesByType(type);
-	};
-
 	const onFileSelect = (id: number, type: 'select' | 'unselect') => {
 		setSelectedIds(prev =>
 			type === 'select' ? [...prev, id] : prev.filter((_id: number) => _id !== id)
@@ -37,9 +33,12 @@ export const Files: FC<FilesProps> = ({items, withActions}) => {
 
 	const onClickRemove = () => {
 		Api.files.removeByIds(selectedIds);
+		// @ts-ignore
 		setFiles(prev => prev.filter(file => !selectedIds.includes(file.id)));
 		setSelectedIds([]);
 	};
+
+	// @ts-ignore
 	const onUpload = async options => {
 		// const currPath = router.asPath;
 		// const parts = currPath.split('/')
@@ -59,8 +58,10 @@ export const Files: FC<FilesProps> = ({items, withActions}) => {
 				const uploadResponse = await Api.files.uploadFile(options);
 				if (uploadResponse) {
 					const fileType = patharr[patharr.length - 1];
-					console.log(fileType, 111122312332);
-					const fetchedFiles = await Api.files.getAllFilesByType(patharr[patharr.length - 1]);
+					const fetchedFiles = await Api.files.getAllFilesByType(
+						// @ts-ignore
+						patharr.length > 2 ? fileType : 'all'
+					);
 					fetchedFiles && setFiles(fetchedFiles);
 				}
 			} catch (error) {

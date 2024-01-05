@@ -60,6 +60,7 @@ export const FileList: FC<FilelistProps> = ({files, onFileSelect, selectedIds}) 
 				</div>
 			))}
 			<Selecto
+				//@ts-ignore
 				container=".files"
 				selectableTargets={['.file']}
 				selectByClick
