@@ -1,0 +1,14 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	align-items: center;
+	min-height: 100vh;
+	background-color: #fff;
+}
+
+.formContainer {
+	max-width: 700px;
+	min-width: 200px;
+	padding: 10px;
+}

@@ -1,0 +1,12 @@
+.root {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 20px 10px;
+
+	gap: 10px;
+}
+
+.active {
+	border: 2px solid #4af;
+}
