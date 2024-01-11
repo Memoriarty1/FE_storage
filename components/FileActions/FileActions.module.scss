@@ -1,6 +1,12 @@
+$small: 600px;
+
 .root {
   display: flex;
-  justify-content: flex-start;
   padding: 24px 10px 0px;
   gap: 20px;
+
+  @media screen and (max-width: $small) {
+		justify-content: center;
+    flex-direction: column;
+	}
 }

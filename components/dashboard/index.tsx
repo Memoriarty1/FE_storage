@@ -2,8 +2,6 @@ import { Button } from 'antd'
 import React, { useCallback } from 'react'
 
 import * as Api from "@/api";
-import { parseCookies } from 'nookies';
-
 
 const Dashboard = () => {
   const onLogout = useCallback(() => {

@@ -1,13 +1,19 @@
+$small: 600;
+$mHeight: calc(100dvh - 64px - 20px - 20px);
+
+.wrapper {
+	background-color: rgb(235, 233, 233);
+	min-height: 100dvh;
+	padding-bottom: 20px;
+}
+
 .main {
 	width: 100%;
 	max-width: 1200px;
-	margin: 40px auto;
+	margin: 20px auto 0;
 	padding: 0 20px;
 }
-.wrapper {
-	background-color: rgb(235, 233, 233);
-	height: 100vh
-}
+
 .layout {
 	background-color: white;
 }
@@ -33,6 +39,10 @@
 	min-height: 600px;
 	border-radius: 15px;
 	margin: auto;
+
+	@media screen and (max-width: 1024px) {
+		min-height: $mHeight;
+	}
 }
 .menu {
 	margin-top: 20px;
@@ -44,6 +54,10 @@
 	display: grid;
 	grid-template-columns: 0.3fr 1fr;
 	width: 100%;
+
+	@media screen and (max-width: 600px) {
+		grid-template-columns: 0.1fr 1fr;
+	}
 }
 .container {
 	width: 100%;

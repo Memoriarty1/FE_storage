@@ -6,33 +6,18 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	// border-radius: 10px;
 	width: 120px;
 	height: 120px;
 	// overflow: hidden;
 	margin: 10px;
-
-	// &:hover {
-	// 	border-radius: 4px;
-	// 	outline: 1px solid #c0bcbc;
-	// 	// filter: drop-shadow(0.1px 0.5px 0px black);
-	// }
 	cursor: pointer;
 
 	.originalName {
-		// word-break: break-all;
-
 		text-align: center;
-		// text-overflow: ellipsis;
-		// white-space: nowrap;
-		// overflow: hidden;
-		// width: 100%;
-
+		text-overflow: ellipsis;
+		white-space: nowrap;
 		overflow: hidden;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 1; /* start showing ellipsis when 3rd line is reached */
-		white-space: pre-wrap;
+		width: 100%;
 	}
 }
 
