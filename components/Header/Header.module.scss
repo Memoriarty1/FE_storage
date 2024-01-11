@@ -1,5 +1,4 @@
 .root {
-	// background-color: rgba(0, 0, 255, 0.644);
 	display: flex;
 	justify-content: center;
 
@@ -11,12 +10,21 @@
 		font-size: 20px;
 		font-family: 'Segoe UI';
 		margin-right: 30px;
+		@media (max-width: 400px) {
+			margin-right: 15px;
+			font-size: 15px;
+		}
 
 		svg {
 			font-size: 24px;
 			position: relative;
 			top: 1px;
 			margin-right: 10px;
+			@media (max-width: 400px) {
+				margin-right: 5px;
+				font-size: 20px;
+
+			}
 		}
 	}
 
@@ -36,10 +44,6 @@
 
 		@media (max-width: 768px) {
 			width: 600px;
-		}
-
-		@media (max-width: 375px) {
-			width: 200px;
 		}
 
 		.headerLeft {

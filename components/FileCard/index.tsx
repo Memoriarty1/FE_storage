@@ -1,4 +1,4 @@
-import React, {FC, createRef, useState} from 'react';
+import React, {FC} from 'react';
 import styles from './FileCard.module.scss';
 import {getExtensionFromFileName} from '@/utils/getExtensionFromFileName';
 import {isImage} from '@/utils/isImage';
@@ -16,12 +16,7 @@ interface FileCardProps {
 export const FileCard: FC<FileCardProps> = ({
 	originalName,
 	filename,
-	id,
-	selectedIds,
-	// onMouseMove,
-	// onMouseOut,
 }) => {
-	// const ref = createRef();
 	const extension = getExtensionFromFileName(filename);
 	const imageUrl =
 		extension && isImage(extension) ? `http://localhost:7777/uploads/${filename}` : '';
@@ -37,8 +32,6 @@ export const FileCard: FC<FileCardProps> = ({
 	return (
 		<div
 			className={styles.root}
-			// onMouseEnter={() => onMouseMove(id)}
-			// onMouseLeave={() => onMouseOut(id)}
 		>
 			<div className={styles.icon}>
 				<i className={classColor}>{extension}</i>

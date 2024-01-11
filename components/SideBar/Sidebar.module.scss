@@ -4,10 +4,12 @@
 	align-items: center;
 	width: 250px;
 	padding: 20px;
+	@media screen and (max-width: 600px) {
+		width: 165px;
+	}
 }
 
 .menu {
-	margin-top: 20px;
 	padding-right: 10px;
 	height: 100%;
 }

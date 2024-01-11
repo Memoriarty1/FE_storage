@@ -22,9 +22,6 @@ export const FileActions: FC<FileActionsProps> = ({
 				//@ts-ignore
 				onUpload={onUpload}
 			/>
-			{/* <Button onClick={onClickShare} disabled={!isActive}>
-				Share
-			</Button> */}
 			<Popconfirm
 				title="Delete file?"
 				description="Your files will be in the bucket after delete"

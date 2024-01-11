@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Upload, UploadFile, notification} from 'antd';
+import {Button, Upload, UploadFile} from 'antd';
 import {CloudUploadOutlined} from '@ant-design/icons';
 
 interface UploadButton {
